@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>Order's information:</h1>
+        <p>Order UID: {{.Order_uid}}</p>
+        <p>Track number: {{.Track_number}}</p>
+        <p>Entry: {{.Entry}}</p>
+        <p>Locale: {{.Locale}}</p>
+        <p>Internal signature: {{.Internal_signature}}</p>
+        <p>Customer ID: {{.Customer_id}}</p>
+        <p>Delivery service: {{.Delivery_service}}</p>
+        <p>Shard Key: {{.ShardKey}}</p>
+        <p>SM ID: {{.SM_id}}</p>
+        <p>Date created: {{.Date_created}}</p>
+        <p>OOF shard: {{.OOF_shard}}</p>
+
+        <h2>Delivery's information</h2>
+        <p>Name: {{.Delivery.Name}}</p>
+        <p>Phone: {{.Delivery.Phone}}</p>
+        <p>Zip: {{.Delivery.Zip}}</p>
+        <p>City: {{.Delivery.City}}</p>
+        <p>Address: {{.Delivery.Address}}</p>
+        <p>Region: {{.Delivery.Region}}</p>
+        <p>Email: {{.Delivery.Email}}</p>
+
+        <h2>Payment's information</h2>
+        <p>Transaction: {{.Payment.Transaction}}</p>
+        <p>Request ID: {{.Payment.Request_id}}</p>
+        <p>Currency: {{.Payment.Currency}}</p>
+        <p>Provider: {{.Payment.Provider}}</p>
+        <p>Amount: {{.Payment.Amount}}</p>
+        <p>Payment dt: {{.Payment.Payment_dt}}</p>
+        <p>Bank: {{.Payment.Bank}}</p>
+        <p>Delivery cost: {{.Payment.Delivery_cost}}</p>
+        <p>Goods total: {{.Payment.Goods_total}}</p>
+        <p>Custom fee: {{.Payment.Custom_fee}}</p>
+
+        <h2>Items' information</h2>
+        <ul>
+        {{range .Items}}
+        <li>
+            <p>CHRT ID: {{.CHRT_id}}</p>
+            <p>Track number: {{.Track_number}}</p>
+            <p>Price: {{.Price}}</p>
+            <p>RID: {{.Rid}}</p>
+            <p>Name: {{.Name}}</p>
+            <p>Sale: {{.Sale}}</p>
+            <p>Size: {{.Size}}</p>
+            <p>Total price: {{.Total_price}}</p>
+            <p>NM ID: {{.NM_id}}</p>
+            <p>Brand: {{.Brand}}</p>
+            <p>Status: {{.Status}}</p><br>
+        </li>
+        {{end}}
+        </ul>
+    </body>
+</html>
