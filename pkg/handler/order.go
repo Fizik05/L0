@@ -30,8 +30,12 @@ func (h *Handler) getOrder(c *gin.Context) {
 			"Delivery_service":   item.Delivery_service,
 			"ShardKey":           item.ShardKey,
 			"SM_id":              item.SM_id,
-			"Date_created":       item.Date_created.Format("2021-11-26T06:22:19Z"),
+			"Date_created":       item.Date_created.Format("2006-01-02T15:04:05Z"),
 			"OOF_shard":          item.OOF_shard,
 		},
 	)
+}
+
+func (h *Handler) homePage(c *gin.Context) {
+	c.JSON(http.StatusOK, nil)
 }

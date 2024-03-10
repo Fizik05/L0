@@ -17,6 +17,8 @@ func (h *Handler) InitRoutes() *gin.Engine {
 	router := gin.New()
 	router.LoadHTMLGlob("templates/*.html")
 
+	router.GET("/", h.homePage)
+
 	api := router.Group("/api")
 	{
 		api.GET("/:order_uid", h.getOrder)
